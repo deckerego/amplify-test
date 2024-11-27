@@ -8,6 +8,14 @@ import "@aws-amplify/ui-react/styles.css";
 
 Amplify.configure(outputs);
 
+export async function getServerSideProps() {
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/ditto/`);
+  const data = await res.json();
+ 
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
 export type Todo = { id: string, content: string, }[];
 
 export default function App() {
