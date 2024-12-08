@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "amplifytest-terraform-${data.aws_caller_identity.current.account_id}"
+    bucket = "terraform-deckerego"
     key    = "amplifytest_environment"
     region = "us-east-1"
   }

@@ -1,10 +1,16 @@
-## AWS Amplify Next.js (App Router) Starter Template
+# AWS Amplify Next.js (App Router) Minimal Template
 
-This repository provides a starter template for creating applications using Next.js (App Router) and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
+This repository provides a starter template for creating applications using Next.js (App Router) and AWS Amplify, 
+avoiding AppSync at all costs and using Amplify only for server-side rendering while avoiding proprietary bindings.
+
 
 ## Deploying to AWS
 
-For detailed instructions on deploying your application, refer to the [deployment section](https://docs.amplify.aws/nextjs/start/quickstart/nextjs-app-router-client-components/#deploy-a-fullstack-app-to-aws) of our documentation.
+To set up remote infrastructure, switch to the `/terraform` directory and run:
+
+1. `AWS_PROFILE=yourprofile terraform init -upgrade`
+1. `AWS_PROFILE=yourprofile terraform apply`
+
 
 ## License
 
